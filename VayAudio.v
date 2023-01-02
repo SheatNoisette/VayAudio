@@ -27,3 +27,8 @@ pub fn set_master_volume(volume f32) {
 	}
 	C.SetMasterVolume(volume)
 }
+
+// Get number of sounds playing
+pub fn get_sounds_playing() int {
+	return C.GetSoundsPlaying()
+}

@@ -10,7 +10,7 @@ wrapper using the RayLib "raudio" module.
 
 Feature:
 - Create a audio device
-- Load WAV and MP3 files
+- Load WAV, OGG and MP3 files
 
 **This module is unfinished but fulfills his main purpose: play sounds.**
 It will be improved in the future.

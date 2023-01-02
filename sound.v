@@ -14,16 +14,13 @@ mut:
 
 // Load a sound from a file.
 pub fn load(filename string) ?VaySound {
-	mut s := VaySound {}
-
+	s := VaySound{
+		sound: C.LoadSound(filename.str)
+	}
 	unsafe {
-		s.sound = C.LoadSound(filename.str)
-		println('sound: $s.sound')
-		/*
-		if s.sound == nil {
+		if s.sound.frameCount == 0 || s.sound.stream.buffer == nil {
 			return error('Could not load sound')
 		}
-		*/
 	}
 	return s
 }
